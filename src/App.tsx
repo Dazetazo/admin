@@ -2,10 +2,15 @@ import { useEffect, useState } from 'react';
 import { firebaseConfig } from './Configs/firebaseConfig';
 import { FirebaseDataProvider } from 'react-admin-firebase';
 import { Admin, Resource, ShowGuesser } from "react-admin";
-import { UserList } from "./user";
-import { PostList, PostEdit, PostCreate } from "./posts";
 import { Dashboard } from "./dashboard";
 import { authProvider } from "../src/Providers/authProvider";
+//Posts
+import { PostList } from "./Posts/posts-list";
+import { PostEdit } from "./Posts/posts-edit";
+import { PostCreate } from "./Posts/posts-create";
+//Users
+import { UserList } from "./Users/users-list";
+
 
 //Icons
 import PostIcon from "@mui/icons-material/Book";

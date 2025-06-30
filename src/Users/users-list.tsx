@@ -1,6 +1,6 @@
 import { useMediaQuery, Theme } from "@mui/material";
 import { List, SimpleList, DataTable, EmailField, UrlField } from "react-admin";
-import MyUrlField from "./myUrlField";
+import MyUrlField from "../myUrlField";
 
 //Componente para motrar el listado de usuarios
 
