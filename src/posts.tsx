@@ -15,7 +15,7 @@ import {
 // Componente para mostrar el listado de publicaciones
 
 export const PostList = () => (
-    <List>
+    <List filter={postFilters} sort={{ field: "id", order: "ASC" }}>
         <DataTable rowClick={false}>
             <DataTable.Col source="id" />
             <DataTable.Col source="userId">
@@ -53,3 +53,10 @@ export const PostCreate = () => (
     </SimpleForm>
   </Create>
 );
+
+// Filtros para el listado de publicaciones
+
+const postFilters = [
+    <TextInput source="q" label="Search" alwaysOn />,
+    <ReferenceInput source="userId" label="User" reference="users" />,
+];
