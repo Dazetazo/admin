@@ -3,7 +3,7 @@ import { dataProvider } from './dataProvider';
 import { UserList } from "./user";
 import { PostList, PostEdit, PostCreate } from "./posts";
 import { Dashboard } from "./dashboard";
-import { authProvider } from "./authProvider";
+import { authProvider } from "../src/Providers/authProvider";
 
 //Icons
 import PostIcon from "@mui/icons-material/Book";
