@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { firebaseConfig } from './Configs/firebaseConfig';
 import { FirebaseDataProvider } from 'react-admin-firebase';
-import { Admin, Resource, ShowGuesser } from "react-admin";
+import { Admin, Resource, ShowGuesser, radiantLightTheme, radiantDarkTheme } from "react-admin";
 import { Dashboard } from "./dashboard";
 import { authProvider } from "../src/Providers/authProvider";
 //Posts
@@ -38,7 +38,13 @@ export const App = () => {
   if (!dataProvider) return <div>Cargando...</div>;
 
   return (
-    <Admin dataProvider={dataProvider} dashboard={Dashboard} authProvider={authProvider}>
+    <Admin 
+      dataProvider={dataProvider} 
+      dashboard={Dashboard} 
+      authProvider={authProvider}
+      theme={radiantLightTheme}
+      darkTheme={radiantDarkTheme}
+      >
       {/* El componente Resource es el que define los recursos que se van a mostrar en la aplicación */}
       {/*Posts es el nombre del recurso, list es el componente que muestra el listado de publicaciones, edit es el componente que permite editar una publicación, create es el componente que permite crear una nueva publicación, icon es el icono que se muestra en la barra lateral*/}
       <Resource
