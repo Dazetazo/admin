@@ -10,12 +10,18 @@ import {
     Create,
 } from "react-admin";
 
+// Filtros para el listado de publicaciones
+
+const postFilters = [
+    <TextInput source="q" label="Search" alwaysOn />,
+    <ReferenceInput source="userId" label="User" reference="users" />,
+];
 
 
 // Componente para mostrar el listado de publicaciones
 
 export const PostList = () => (
-    <List filter={postFilters} sort={{ field: "id", order: "ASC" }}>
+    <List filters={postFilters} sort={{ field: "id", order: "ASC" }}>
         <DataTable rowClick={false}>
             <DataTable.Col source="id" />
             <DataTable.Col source="userId">
@@ -54,9 +60,3 @@ export const PostCreate = () => (
   </Create>
 );
 
-// Filtros para el listado de publicaciones
-
-const postFilters = [
-    <TextInput source="q" label="Search" alwaysOn />,
-    <ReferenceInput source="userId" label="User" reference="users" />,
-];
