@@ -10,11 +10,15 @@ import { PostEdit } from "./Posts/posts-edit";
 import { PostCreate } from "./Posts/posts-create";
 //Users
 import { UserList } from "./Users/users-list";
+import { UserCreate } from './Users/users-create';
+import { UserEdit } from './Users/users-edit';
+
 
 
 //Icons
 import PostIcon from "@mui/icons-material/Book";
 import UserIcon from "@mui/icons-material/Group";
+
 
 
 //Pagina principal del admin
@@ -59,6 +63,8 @@ export const App = () => {
         name="users"
         list={UserList}
         show={ShowGuesser}
+        create={UserCreate} 
+        edit={UserEdit}
         icon={UserIcon}
       />
     </Admin>
